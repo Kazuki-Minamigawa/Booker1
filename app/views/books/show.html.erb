@@ -1,0 +1,19 @@
+<% if flash[:create] %>
+  <div class="flash">
+    <%= flash[:create] %>
+  </div>
+<% end %>
+
+<% if flash[:update] %>
+  <div class="flash">
+    <%= flash[:update] %>
+  </div>
+<% end %>
+
+<strong>Title:</strong><%= @book.title %>
+<p><strong>Body:</strong><%= @book.body %></p>
+
+<p>
+  <%= link_to "Edit", "/books/#{@book.id}/edit" %>
+  <%= link_to "Back", "/books" %>
+</p>
